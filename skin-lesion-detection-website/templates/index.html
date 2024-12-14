@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesion Insight</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <!-- Left side: Logo -->
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Lesion Insight Logo">
+        <span>LesionInsight AI</span>
+    </div>
+    <!-- Right side: Navigation Links -->
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-to-use">How to Use</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="{{ url_for('team') }}">Team</a></li>
+    </ul>
+</nav>
+
+<!-- Full Page Video Background -->
+<div class="video-container">
+    <video autoplay loop muted>
+        <source src="{{ url_for('static', filename='videos/herovideo.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Overlay with content -->
+    <div class="overlay">
+        <h1>Welcome to Lesion Insight</h1>
+        <a href="{{ url_for('upload') }}" class="btn">Scan Image</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<section id="features">
+    <h2>Features</h2>
+    <p>Lesion Insight offers a variety of features to help detect skin conditions early. Some of the key features include:</p>
+    <div class="features-container">
+        <div class="feature-box">
+            <h3>AI-based Skin Detection</h3>
+            <p>Our AI algorithm detects skin conditions with high accuracy.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Accurate Disease Predictions</h3>
+            <p>Get accurate predictions to help with early diagnosis.</p>
+        </div>
+        <div class="feature-box">
+            <h3>User-friendly Interface</h3>
+            <p>Simple and intuitive design to make the process easier.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Fast & Secure Processing</h3>
+            <p>Upload and process images securely with fast results.</p>
+        </div>
+    </div>
+</section>
+
+<!-- How to Use Section -->
+<section id="how-to-use">
+    <h2>How to Use</h2>
+    <p>Follow these simple steps to use the Lesion Insight platform:</p>
+    <div class="steps-container">
+        <div class="step-box">
+            <img src="{{ url_for('static', filename='images/step1.jpeg') }}" alt="Upload Image" class="step-image">
+            <h3>Step 1: Upload Image</h3>
+            <p>Upload an image of your skin lesion for analysis.</p>
+        </div>
+        <div class="step-box">
+            <img src="{{ url_for('static', filename='images/step2.jpg') }}" alt="AI Analysis" class="step-image">
+            <h3>Step 2: AI Analysis</h3>
+            <p>The AI model will analyze the image and predict the disease.</p>
+        </div>
+        <div class="step-box">
+            <img src="{{ url_for('static', filename='images/step3.jpeg') }}" alt="View Results" class="step-image">
+            <h3>Step 3: View Results</h3>
+            <p>View the prediction results along with information about the condition.</p>
+        </div>
+    </div>
+    <p>If you're unsure, always consult with a healthcare professional for further guidance.</p>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out to us!</p>
+    <div class="contact-info">
+        <div class="contact-box">
+            <img src="{{ url_for('static', filename='images/email-icon.png') }}" alt="Email" class="contact-icon">
+            <h3>Email</h3>
+            <p><a href="mailto:contact@lesioninsight.com">contact@lesioninsight.com</a></p>
+        </div>
+        <div class="contact-box">
+            <img src="{{ url_for('static', filename='images/phone-icon.png') }}" alt="Phone" class="contact-icon">
+            <h3>Phone</h3>
+            <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h3>Or Send Us a Message</h3>
+        <form action="/submit-message" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Lesion Insight. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

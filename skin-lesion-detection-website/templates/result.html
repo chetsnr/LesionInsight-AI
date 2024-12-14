@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<!-- Centering the result box -->
+<div class="result-container">
+    <div class="result-box">
+        <h1>Prediction Result</h1>
+        
+        <!-- Display the image -->
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/uploads/' + filename) }}" alt="Uploaded Image" width="300">
+        </div>
+
+        <!-- Display predicted disease -->
+        <p><strong>Predicted Disease:</strong> {{ result }}</p>
+
+        <!-- Button to go back to home -->
+        <a href="/" class="btn back-btn">Go Back to Home</a>
+    </div>
+</div>
+{% endblock %}

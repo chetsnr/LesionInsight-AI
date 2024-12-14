@@ -1,0 +1,534 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: burlywood;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it stays above other content */
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo img {
+    height: 40px; /* Adjust the logo size */
+    width: auto;  /* Maintain the aspect ratio */
+    margin-right: 10px;  /* Space between logo and text */
+  }
+  
+  .navbar .logo span {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    margin-left: 20px;  /* Space between each link */
+  }
+  
+  .navbar ul li a {
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+  
+  /* Hover effect for links */
+  .navbar ul li a:hover {
+    background-color: lemonchiffon;
+    color: rgb(208, 156, 73);
+    transition: 0.3s;
+  }
+  
+  /* Full Page Video Background */
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 60px; /* Adjust to avoid navbar overlap */
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay with content on top of the video */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .btn {
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff6347;
+  }
+  
+  /* Features Section */
+  #features {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: lemonchiffon;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .feature-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    text-align: center;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-box h3 {
+    font-size: 1.5rem;
+    color: #5d4037;
+    margin-bottom: 15px;
+  }
+  
+  .feature-box p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: burlywood;
+  }
+  
+  .feature-box:hover h3 {
+    color: #3e2723;
+  }
+  
+  .feature-box:hover p {
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .feature-box {
+      width: 48%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feature-box {
+      width: 100%; /* Stack the boxes vertically for very small screens */
+    }
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: burlywood;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Contact Us Section */
+  #contact-us {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: lemonchiffon;
+  }
+  
+  #contact-us h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #contact-us p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-box {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-box h3 {
+    font-size: 1.4rem;
+    color: #5d4037;
+    margin: 15px 0;
+  }
+  
+  .contact-box p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .contact-box a {
+    color: #ff7f50;
+    text-decoration: none;
+  }
+  
+  .contact-box a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover effect for contact boxes */
+  .contact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: burlywood;
+  }
+  
+  .contact-form {
+    background-color: lemonchiffon;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    padding: 12px 25px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ff6347;
+  }
+  
+  /* Responsive Design for Contact Section */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Container for Other Pages */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  form input {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  form .btn {
+    cursor: pointer;
+  }
+  
+  .back-btn {
+    background-color: #333;
+  }
+  
+  .back-btn:hover {
+    background-color: #555;
+  }
+  
+  /* How to Use Section */
+  #how-to-use {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: lemonchiffon;
+  }
+  
+  #how-to-use h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #how-to-use p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .step-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step-box h3 {
+    font-size: 1.6rem;
+    color: #5d4037;
+    margin: 15px 0;
+  }
+  
+  .step-box p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  .step-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .step-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: burlywood;
+  }
+  
+  .step-box:hover h3 {
+    color: #3e2723;
+  }
+  
+  .step-box:hover p {
+    color: #333;
+  }
+  
+  /* Responsive Design for Steps */
+  @media (max-width: 768px) {
+    .step-box {
+      width: 48%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .step-box {
+      width: 100%; /* Stack the boxes vertically for very small screens */
+    }
+  }
+  /* Container for the upload box */
+.upload-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;  /* Center the box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for the upload box */
+.upload-box:hover {
+    transform: translateY(-10px); /* Lifts the box */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: burlywood; /* Change background color */
+}
+
+.upload-box h1 {
+    font-size: 2rem;
+    color: #5d4037;
+    margin-bottom: 20px;
+}
+
+.upload-box input {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.upload-box .btn {
+    padding: 10px 10px;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin: 10px 10px;
+}
+
+.upload-box .btn:hover {
+    background-color: #ff6347;
+}
+
+.upload-box .back-btn {
+    background-color: #333;
+}
+
+.upload-box .back-btn:hover {
+    background-color: #555;
+}
+
+/* Centering the result box */
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lemonchiffon;
+    padding: 20px;
+}
+
+/* Styling the result box */
+.result-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px; /* Adjust the width of the result box */
+}
+
+.image-container {
+    margin: 20px 0;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #ff6347;
+}
+
+.back-btn {
+    background-color: #333;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
