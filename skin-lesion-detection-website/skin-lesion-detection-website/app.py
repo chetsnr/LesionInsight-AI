@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Load your trained CNN model
-model = load_model("my_model.h5")  # Ensure my_model.h5 is in the project root directory
+model = load_model("/Users/anugrah/Downloads/my_model.h5")  # Ensure my_model.h5 is in the project root directory
 
 # Define class labels based on your model's output
 CLASS_LABELS = [
